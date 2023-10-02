@@ -57,3 +57,13 @@ deactivate
 ```
 
 Now you are all set to run the SastaGPT application locally on your machine!
+
+
+## Work Left to Do
+
+- **MongoDB Integration:** Implement MongoDB integration to store chat history.
+
+- **OpenAI AI Chat Integration:** Integrate OpenAI's API to enhance the chat functionality with AI capabilities.
+
+Feel free to contribute to these tasks or open issues for any bugs or additional features you'd like to see in SastaGPT!
+
