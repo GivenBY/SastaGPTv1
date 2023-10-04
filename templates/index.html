@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SastaGPT</title>
     <meta name="keywords" content="keywords" />
 
     <meta name="description" content="description" />
@@ -94,10 +94,24 @@
       <div class="right">
         <div class="chatContent">
           <div class="text">SastaGPT</div>
+          <div class="question">
+            <div class="questionText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sit
+              nostrum explicabo ex voluptatibus debitis perspiciatis numquam
+              consectetur mollitia dolorem!
+            </div>
+          </div>
+          <div class="answer">
+            <pre class="answerText">Loading...</pre>
+          </div>
         </div>
         <div class="sendButton">
-          <textarea name="text" placeholder="Send a Message"></textarea>
-          <button class="sendButton__button">
+          <textarea
+            id="askq"
+            name="text"
+            placeholder="Send a Message"
+          ></textarea>
+          <button id="sendButton__button" class="sendButton__button">
             <img src="../static/img/send.svg" alt="Send" />
           </button>
         </div>
