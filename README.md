@@ -7,9 +7,9 @@ To run the SastaGPT application locally, you need to set up a virtual environmen
 1. **Create Virtual Environment:**
    Open your terminal or command prompt and navigate to the project directory. Run the following command to create a virtual environment named `venv`:
 
-```
-python -m venv venv
-```
+   ```
+   python -m venv venv
+   ```
 
 2. **Activate the Virtual Environment:**
    After creating the virtual environment, activate it using the appropriate command based on your operating system:
@@ -27,14 +27,12 @@ python -m venv venv
 
 3. **Install Dependencies:**
    While the virtual environment is active, install Flask and other required packages using `pip`:
-
-```
-cd SastaGPT
-```
-
-```
-pip install -r requirements.txt
-```
+   ```
+   cd SastaGPT
+   ```
+   ```
+   pip install -r requirements.txt
+   ```
 
 ## Running the Application
 
@@ -44,17 +42,16 @@ pip install -r requirements.txt
 2. **Set Environment Variables:**
    Ensure that your `.env` file is properly configured with the following parameters:
 
-```
-OPENAI_API_KEY=your_openai_api_key
-MONGO_URL=your_mongodb_connection_string
-```
+   ```
+   OPENAI_API_KEY=your_openai_api_key
+   MONGO_URL=your_mongodb_connection_string
+   ```
 
 3. **Run the Application:**
    Start the Flask application by running the following command:
-
-```
-python app.py
-```
+   ```
+   python app.py
+   ```
 
 Your Flask application will be hosted locally on `localhost:5000`.
 
