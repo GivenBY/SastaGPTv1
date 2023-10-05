@@ -38,7 +38,7 @@ sendButton__button.addEventListener("click", async () => {
   newQuestionElement.appendChild(questionTextElement);
 
   // Create element for displaying "Loading..." while waiting for the API response
-  const answerTextElement = document.createElement("pre");
+  const answerTextElement = document.createElement("div");
   answerTextElement.className = "answerText";
   answerTextElement.textContent = "Loading...";
   newAnswerElement.appendChild(answerTextElement);
@@ -49,9 +49,9 @@ sendButton__button.addEventListener("click", async () => {
 
   // Make a POST request to the server API with the user's question
   let result = await postData("/api", { question: questionValues });
-
+  let itemresult = (answerText = result.answer.replace(/\n/g, "<br>"));
   // Populate the answer element with the response from the API
-  answerTextElement.textContent = result.answer;
+  answerTextElement.innerHTML = itemresult;
 
   // Get the chat history container
   const chatHistoryContainer = document.querySelector(".chats");
