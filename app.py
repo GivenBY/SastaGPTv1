@@ -3,7 +3,8 @@ from pymongo import MongoClient
 from flask import Flask, jsonify, request, render_template
 from dotenv import load_dotenv
 import openai
-
+import certifi
+ca = certifi.where()
 # Load environment variables from .env file
 load_dotenv()
 
@@ -15,7 +16,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 if not mongo_url or not openai.api_key:
     raise ValueError("Invalid or missing environment variables.")
 
-mongo = MongoClient(mongo_url, ssl_cert_reqs=ssl.CERT_NONE)
+mongo = MongoClient(mongo_url, tlsCAFile=ca)
 db = mongo.get_database("sastagpt")
 
 
