@@ -20,7 +20,7 @@ db = mongo.get_database("sastagpt")
 
 
 @app.route("/")
-def app():
+def home():
     chats = mongo.db.chats.find({})
     myChats = [chat for chat in chats]
     print(myChats)
