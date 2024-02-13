@@ -15,7 +15,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 if not mongo_url or not openai.api_key:
     raise ValueError("Invalid or missing environment variables.")
 
-mongo = MongoClient(mongo_url)
+mongo = MongoClient(mongo_url, ssl_cert_reqs=ssl.CERT_NONE)
 db = mongo.get_database("sastagpt")
 
 
